@@ -1,2 +1,1 @@
-# hello
-vagrant ansible load_ballanser flask
+# vagrant ansible load_ballanser flask
