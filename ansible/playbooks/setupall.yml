@@ -114,3 +114,29 @@
   - name: restart haproxy
     service: name=haproxy state=restarted
 
+#ufw firewall all
+- hosts: all
+  sudo: yes
+  
+  tasks:
+  
+    - name: install ufw packages
+      apt: state=installed pkg=ufw
+      
+    - name: setup ufw
+      ufw: state=enabled policy=deny
+      
+    - name: ufw allow ssh traffic
+      ufw: rule=allow port=ssh
+    
+    - name: ufw allow http traffic
+      ufw: rule=allow port=http
+      
+#ufw firewall web
+- hosts: web
+  sudo: yes
+  
+  tasks:      
+    - name: ufw allow uwsgi<->nginx traffic port
+      ufw: rule=allow port=9002 proto=tcp from=10.0.15.0/27
+
