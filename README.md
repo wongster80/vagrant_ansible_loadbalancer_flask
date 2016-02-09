@@ -22,6 +22,7 @@ apt-add-repository -y ppa:ansible/ansible
 apt-get update
 
 apt-get -y install ansible
+
 #### Run VMs
 vagrant box add ubuntu/trusty64
 
@@ -46,3 +47,14 @@ http://localhost:8080/haproxy?stats
 host$ ab -n 10000 -c 25 http://localhost:8080/
 
 ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
+
+###Softvare version:
+Ansible 1.9.2
+
+Vagrant 1.8.1
+
+Flask 0.9
+
+Jinja2 2.6
+
+host: Ubuntu 15.10 wily 4.2.0-23-generic x86_64
