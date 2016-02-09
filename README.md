@@ -21,7 +21,7 @@
 ├── requirements.txt # requirement software to install into virtualenv
 ├── Vagrantfile
 ├── Vagrantfile_proj # Vagrantfile
-└── wsgi.py # wsgi app run
+└── wsgi.py # run app using uWSGI
 ```
 ##REQUIREMENTS:
 ####Project tested with:
