@@ -1,4 +1,7 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
+
+![alt tag](https://github.com/dgamanenko/vagrant_ansible_loadbalancer_flask/blob/master/vagrant_ansible.png)
+
 ##PROJECT TREE:
 ```
 ├── ansible # ansible provison playbooks and templates
