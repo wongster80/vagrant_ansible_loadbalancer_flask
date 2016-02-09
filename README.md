@@ -62,7 +62,7 @@ cd ~/vagrant/test
 vagrant init ubuntu/trusty64
 cp Vagrantfile_proj Vagrantfile
 vagrant up #to allow modify /etc/hosts by vagrant-hostmanager input sudo password
-run 'vagrant provision' command for provison шf you have made changes on palybook, templates...
+run 'vagrant provision' command for provison if you have made changes on palybook, templates...
 ```
 ##Tests:
 ####test Flask app:
