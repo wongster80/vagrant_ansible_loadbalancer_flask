@@ -1,5 +1,6 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 ##PROJECT TREE:
+```
 ├── ansible
 │   ├── hosts
 │   └── playbooks
@@ -21,7 +22,7 @@
 ├── Vagrantfile
 ├── Vagrantfile_proj
 └── wsgi.py
-
+```
 ##REQUIREMENTS:
 ####Project tested with:
 ```
