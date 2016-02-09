@@ -15,15 +15,12 @@ apt-get -y install software-properties-common<br>
 apt-add-repository -y ppa:ansible/ansible<br>
 apt-get update<br>
 apt-get -y install ansible<br>
-#### Run VMs<br>
+##Run VMs<br>
 vagrant box add ubuntu/trusty64<br>
 mkdir -p ~/vagrant/test<br>
 cd ~/vagrant/test<br>
 vagrant init ubuntu/trusty64<br>
 vagrant up # to allow modify /etc/hosts by vagrant-hostmanager input sudo password<br>
-
-
-
 ##Tests:<br>
 test Flask app:<br>
 http://localhost:8080/<br>
@@ -34,8 +31,7 @@ http://localhost:8080/haproxy?stats<br>
 use benchmark for load balancer:<br>
 host$ ab -n 10000 -c 25 http://localhost:8080/<br>
 ab - installed apache bench on host machine (sudo apt-get install apache2-utils)<br>
-
-###Softvare version:<br>
+##Softvare version:<br>
 Ansible 1.9.2<br>
 Vagrant 1.8.1<br>
 Flask 0.9<br>
