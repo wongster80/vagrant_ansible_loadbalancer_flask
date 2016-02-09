@@ -5,7 +5,7 @@
 
   vars:
     app_name: hello_app_flask
-    repo_url: https://github.com/dgamanenko/vagrant_ansimble_loadbalancer_flask.git
+    repo_url: https://github.com/dgamanenko/vagrant_ansible_loadbalancer_flask.git
     repo_remote: origin
     repo_version: master
     webapps_dir: /srv/webapps
