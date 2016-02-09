@@ -1,7 +1,7 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 ##PROJECT TREE:
 ```
-├── ansible #
+├── ansible # ansible provison playbooks and templates
 │   ├── hosts #ansible inventory file
 │   └── playbooks #ansible playbooks and templates
 │       ├── setupall.yml #provision playbook
@@ -31,6 +31,8 @@ Vagrant 1.8.1
 Flask 0.9
 Jinja2 2.6
 host: Ubuntu 15.10 wily 4.2.0-23-generic x86_64
+
+...modify vb.memory values in Vagrantfile to change VMs Virtual Memory
 ```
 ##QUICK START:
 #### Install Virtualbox
@@ -60,6 +62,7 @@ cd ~/vagrant/test
 vagrant init ubuntu/trusty64
 cp Vagrantfile_proj Vagrantfile
 vagrant up #to allow modify /etc/hosts by vagrant-hostmanager input sudo password
+run 'vagrant provision' command for provison шf you have made changes on palybook, templates...
 ```
 ##Tests:
 ####test Flask app:
