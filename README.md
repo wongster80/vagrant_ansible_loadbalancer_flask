@@ -1,15 +1,10 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 ##REQUIREMENTS:
 Project tested with:
-
 Ansible 1.9.2
-
 Vagrant 1.8.1
-
 Flask 0.9
-
 Jinja2 2.6
-
 host: Ubuntu 15.10 wily 4.2.0-23-generic x86_64
 ##QUICK START:
 #### Install Virtualbox
