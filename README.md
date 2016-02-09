@@ -28,13 +28,13 @@ vagrant up # to allow modify /etc/hosts by vagrant-hostmanager input sudo passwo
 
 
 ##Tests:
-###test Flask app:
+####test Flask app:
 http://localhost:8080/
-###test static image:
+####test static image:
 http://localhost:8080/imgs/welcome.jpg
-###test round robin load balancer:
+####test round robin load balancer:
 http://localhost:8080/haproxy?stats
-####use benchmark for load balancer:
+#####use benchmark for load balancer:
 host$ ab -n 10000 -c 25 http://localhost:8080/
 
 ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
