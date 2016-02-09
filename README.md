@@ -1,7 +1,7 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 
 
-##prepare host:
+##Prepare host:
 
 wget http://download.virtualbox.org/virtualbox/5.0.14/virtualbox-5.0_5.0.14-105127~Ubuntu~wily_amd64.deb
 
@@ -24,3 +24,16 @@ cd ~/vagrant/test
 vagrant init ubuntu/trusty64
 
 vagrant up # to allow modify /etc/hosts by vagrant-hostmanager input sudo password
+
+
+
+##Tests:
+###test Flask app:
+http://localhost:8080/
+###test static image:
+http://localhost:8080/imgs/welcome.jpg
+###test round robin load balancer:
+http://localhost:8080/haproxy?stats
+####use benchmark:
+host$ ab -n 10000 -c 25 http://localhost:8080/
+ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
