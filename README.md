@@ -13,9 +13,8 @@ Jinja2 2.6
 host: Ubuntu 15.10 wily 4.2.0-23-generic x86_64
 ##QUICK START:
 #### Install Virtualbox
-wget http://download.virtualbox.org/virtualbox/5.0.14/virtualbox-5.0_5.0.14-105127~Ubuntu~wily_amd64.deb
-
-sudo dpkg -i virtualbox-5.0_5.0.14-105127~Ubuntu~wily_amd64.deb
+'wget http://download.virtualbox.org/virtualbox/5.0.14/virtualbox-5.0_5.0.14-105127~Ubuntu~wily_amd64.deb
+sudo dpkg -i virtualbox-5.0_5.0.14-105127~Ubuntu~wily_amd64.deb'
 #### Install Vagrant
 wget https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
 
@@ -41,8 +40,8 @@ mkdir -p ~/vagrant/test
 cd ~/vagrant/test
 
 vagrant init ubuntu/trusty64
-
-vagrant up # to allow modify /etc/hosts by vagrant-hostmanager input sudo password
+cp Vagrantfile_proj Vagrantfile
+vagrant up `#to allow modify /etc/hosts by vagrant-hostmanager input sudo password`
 ##Tests:
 ####test Flask app:
 http://localhost:8080/
