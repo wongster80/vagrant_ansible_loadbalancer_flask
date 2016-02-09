@@ -1,11 +1,12 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 ##REQUIREMENTS:
-Project tested with:
-Ansible 1.9.2
+####Project tested with:
+```Ansible 1.9.2
 Vagrant 1.8.1
 Flask 0.9
 Jinja2 2.6
 host: Ubuntu 15.10 wily 4.2.0-23-generic x86_64
+```
 ##QUICK START:
 #### Install Virtualbox
 ```
@@ -51,5 +52,5 @@ http://localhost:8080/haproxy?stats
 #####use benchmark for load balancer:
 ```
 host$ ab -n 10000 -c 25 http://localhost:8080/
-..ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
+.. ..ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
 ```
