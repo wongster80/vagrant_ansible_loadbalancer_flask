@@ -138,5 +138,5 @@
   
   tasks:      
     - name: ufw allow uwsgi<->nginx traffic port
-      ufw: rule=allow port=9002 proto=tcp from=10.0.15.0/27
+      ufw: rule=allow port=9002 proto=tcp
 
