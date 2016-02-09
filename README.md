@@ -52,6 +52,5 @@ http://localhost:8080/haproxy?stats
 ```
 #####use benchmark for load balancer:
 ```
-host$ ab -n 10000 -c 25 http://localhost:8080/
-.. ..ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
+host$ ab -n 10000 -c 25 http://localhost:8080/ #ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
 ```
