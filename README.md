@@ -32,7 +32,7 @@ Flask 0.9
 Jinja2 2.6
 host: Ubuntu 15.10 wily 4.2.0-23-generic x86_64
 
-...modify vb.memory values in Vagrantfile to change VMs Virtual Memory
+...modify vb.memory values in Vagrantfile to change VMs Virtual Memory (in project Vagrant apply 192Mb per VM)
 ```
 ##QUICK START:
 #### Install Virtualbox
