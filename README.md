@@ -34,7 +34,7 @@ http://localhost:8080/
 http://localhost:8080/imgs/welcome.jpg
 ###test round robin load balancer:
 http://localhost:8080/haproxy?stats
-####use benchmark:
+####use benchmark for load balancer:
 host$ ab -n 10000 -c 25 http://localhost:8080/
 
 ab - installed apache bench on host machine (sudo apt-get install apache2-utils)
