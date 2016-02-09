@@ -24,7 +24,6 @@
         - git-core
         - nginx
 
-    
     - name: install pip
       action: easy_install name=pip
     
@@ -88,7 +87,6 @@
     - name: restart nginx
       action: service name=nginx state=restarted
 
-
 # lb
 - hosts: lb
   sudo: yes
@@ -139,4 +137,3 @@
   tasks:      
     - name: ufw allow uwsgi<->nginx traffic port
       ufw: rule=allow port=9002 proto=tcp
-
