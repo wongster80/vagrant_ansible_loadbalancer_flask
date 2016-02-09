@@ -1,4 +1,27 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
+##PROJECT TREE:
+├── ansible
+│   ├── hosts
+│   └── playbooks
+│       ├── setupall.yml
+│       └── templates
+│           ├── haproxy.cfg.j2
+│           ├── nginx.conf
+│           ├── nginx_site.conf
+│           ├── supervisord.conf
+│           ├── supervisord.sh
+│           └── supervisor.ini
+├── ansible.cfg
+├── hello_app_flask
+│   ├── __init__.py
+│   └── static
+│       └── welcome.jpg
+├── README.md
+├── requirements.txt
+├── Vagrantfile
+├── Vagrantfile_proj
+└── wsgi.py
+
 ##REQUIREMENTS:
 ####Project tested with:
 ```
@@ -46,7 +69,7 @@ http://localhost:8080/
 ```
 http://localhost:8080/imgs/welcome.jpg
 ```
-####test round robin load balancer:
+####statistic for round robin load balancer:
 ```
 http://localhost:8080/haproxy?stats
 ```
