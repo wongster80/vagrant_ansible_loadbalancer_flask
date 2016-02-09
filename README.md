@@ -1,4 +1,4 @@
-#Vagrant Ansible load ballanser Flask(NGINX uWSGI)
+#Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 
 
 ##prepare host:
