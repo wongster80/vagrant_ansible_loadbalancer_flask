@@ -1,27 +1,27 @@
 #Vagrant, Ansible, load ballanser VM, Flask (NGINX uWSGI)
 ##PROJECT TREE:
 ```
-├── ansible
-│   ├── hosts
-│   └── playbooks
-│       ├── setupall.yml
-│       └── templates
-│           ├── haproxy.cfg.j2
-│           ├── nginx.conf
-│           ├── nginx_site.conf
-│           ├── supervisord.conf
-│           ├── supervisord.sh
-│           └── supervisor.ini
-├── ansible.cfg
-├── hello_app_flask
-│   ├── __init__.py
-│   └── static
-│       └── welcome.jpg
-├── README.md
-├── requirements.txt
+├── ansible #
+│   ├── hosts #ansible inventory file
+│   └── playbooks #ansible playbooks and templates
+│       ├── setupall.yml #provision playbook
+│       └── templates #provision templates
+│           ├── haproxy.cfg.j2 #haproxy template
+│           ├── nginx.conf #nginx.conf template
+│           ├── nginx_site.conf #/etc/nginx/sites-available/{{app_name}}.conf template
+│           ├── supervisord.conf #supervisord config template
+│           ├── supervisord.sh #supervisord init script template
+│           └── supervisor.ini #supervisor program config template
+├── ansible.cfg#
+├── hello_app_flask # Flask application
+│   ├── __init__.py #application file
+│   └── static #static resouces dir
+│       └── welcome.jpg # example image
+├── README.md # this file
+├── requirements.txt # requirement software to install into virtualenv
 ├── Vagrantfile
-├── Vagrantfile_proj
-└── wsgi.py
+├── Vagrantfile_proj # Vagrantfile
+└── wsgi.py # wsgi app run
 ```
 ##REQUIREMENTS:
 ####Project tested with:
