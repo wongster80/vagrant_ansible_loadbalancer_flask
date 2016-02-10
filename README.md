@@ -6,7 +6,7 @@
 
 ##PROJECT TREE:
 ```
-├── ansible # ansible provison playbooks and templates
+├── ansible #ansible provison playbooks and templates
 │   ├── hosts #ansible inventory file
 │   └── playbooks #ansible playbooks and templates
 │       ├── setupall.yml #provision playbook
@@ -17,15 +17,15 @@
 │           ├── supervisord.conf #supervisord config template
 │           ├── supervisord.sh #supervisord init script template
 │           └── supervisor.ini #supervisor program config template
-├── ansible.cfg# ansible configuration file (additional configuration for /etc/ansible/ansible.cfg)
-├── hello_app_flask # Flask application
+├── ansible.cfg #ansible configuration file (additional configuration for /etc/ansible/ansible.cfg)
+├── hello_app_flask #Flask application
 │   ├── __init__.py #application file
 │   └── static #static resouces dir
-│       └── welcome.jpg # example image
-├── README.md # this file
-├── requirements.txt # requirement software to install into virtualenv
-├── Vagrantfile_proj # Vagrantfile
-└── wsgi.py # run app using uWSGI
+│       └── welcome.jpg #example image
+├── README.md #this file
+├── requirements.txt #requirement software to install into virtualenv
+├── Vagrantfile_proj #Vagrantfile
+└── wsgi.py #run app using uWSGI
 ```
 ##REQUIREMENTS:
 ####Project tested with:
