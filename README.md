@@ -20,7 +20,7 @@
 ├── ansible.cfg #ansible configuration file (additional configuration for /etc/ansible/ansible.cfg)
 ├── hello_app_flask #Flask application
 │   ├── __init__.py #application file
-│   └── static #static resouces dir
+│   └── static #static resources dir
 │       └── welcome.jpg #example image
 ├── README.md #this file
 ├── requirements.txt #requirement software to install into virtualenv
