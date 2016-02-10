@@ -2,7 +2,7 @@
 
 ![alt tag](https://github.com/dgamanenko/vagrant_ansible_loadbalancer_flask/blob/master/vagrant_ansible.png)
 
-*this is not best redundancy scheme, but it's extended configuration example
+######**this is not best redundancy scheme, but it's extended configuration example
 
 ##PROJECT TREE:
 ```
@@ -79,7 +79,7 @@ http://localhost:8080/
 ```
 http://localhost:8080/imgs/welcome.jpg
 ```
-####statistic for round robin load balancer:
+####round robin load balancer statistic:
 ```
 http://localhost:8080/haproxy?stats
 ```
