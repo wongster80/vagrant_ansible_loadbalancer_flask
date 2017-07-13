@@ -5,7 +5,7 @@
 
   vars:
     app_name: hello_app_flask
-    repo_url: https://github.com/dgamanenko/vagrant_ansible_loadbalancer_flask.git
+    repo_url: https://github.com/wongster80/vagrant_ansible_loadbalancer_flask.git
     repo_remote: origin
     repo_version: master
     webapps_dir: /srv/webapps
@@ -79,6 +79,12 @@
   
     - name: start app
       action: supervisorctl name={{app_name}} state=started
+    
+    - name: reread supervisord config
+      action: supervisorctl name={{app_name}} state=present
+
+    - name: update supervisord config
+      action: supervisorctl name={{app_name}} state=restarted
   
   handlers:
     - name: restart app
