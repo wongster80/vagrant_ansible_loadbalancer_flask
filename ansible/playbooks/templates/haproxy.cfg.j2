@@ -18,7 +18,8 @@ defaults
     option                  httplog
     option                  dontlognull
     option http-server-close
-    option forwardfor       except 127.0.0.0/8
+    #option forwardfor       except 127.0.0.0/8
+    option forwardfor
     option                  redispatch
     retries                 3
     timeout http-request    10s
@@ -34,10 +35,16 @@ defaults
     stats enable
     stats uri /haproxy?stats
 
-backend app
-    {% for host in groups['lb'] %}
-       listen lb {{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}:80
-    {% endfor %}
+frontend app-frontend
+           bind *:80
+           # Add "X-Forwarded-For" header with the original client's IP address
+           reqadd X-Forwarded-Proto:\ http
+           default_backend app-backend
+
+backend app-backend
+#    {% for host in groups['lb'] %}
+#       listen lb {{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}:80
+#    {% endfor %}
     balance     roundrobin
     {% for host in groups['web'] %}
         server {{ host }} {{ hostvars[host]['ansible_eth1']['ipv4']['address'] }} check port 80
