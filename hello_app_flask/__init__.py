@@ -6,7 +6,8 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     ip = request.remote_addr
-    return "Hello from FLASK. My Hostname is: %s \n Your IP address is: %s \n" % (socket.gethostname(), ip)
+    timestamp = log.info("Request Timestamp: {}".format(request.timestamp))
+    return "Hello from FLASK. My Hostname is: %s \n Your IP address is: %s \n The request timestamp is: %s" % (socket.gethostname(), ip, timestamp)
 
 @app.route('/imgs')
 def imgs():
