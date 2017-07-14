@@ -126,8 +126,10 @@
   tasks:
   
     - name: install ufw packages
-#      apt: state=installed pkg=ufw
-      apt: state=disabled pkg=ufw
+      apt: state=installed pkg=ufw
+
+    - name: disable ufw
+      ufw: state=disabled 
 #      
 #    - name: setup ufw
 #      ufw: state=enabled policy=deny
