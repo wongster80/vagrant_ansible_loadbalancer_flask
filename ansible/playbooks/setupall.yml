@@ -125,21 +125,22 @@
   tasks:
   
     - name: install ufw packages
-      apt: state=installed pkg=ufw
-      
-    - name: setup ufw
-      ufw: state=enabled policy=deny
-      
-    - name: ufw allow ssh traffic
-      ufw: rule=allow port=ssh
-    
-    - name: ufw allow http traffic
-      ufw: rule=allow port=http
+#      apt: state=installed pkg=ufw
+      apt: state=disabled pkg=ufw
+#      
+#    - name: setup ufw
+#      ufw: state=enabled policy=deny
+#      
+#    - name: ufw allow ssh traffic
+#      ufw: rule=allow port=ssh
+#    
+#    - name: ufw allow http traffic
+#      ufw: rule=allow port=http
       
 #ufw firewall web
-- hosts: web
-  sudo: yes
-  
-  tasks:      
-    - name: ufw allow uwsgi<->nginx traffic port
-      ufw: rule=allow port=9002 proto=tcp
+#- hosts: web
+#  sudo: yes
+#  
+#  tasks:      
+#    - name: ufw allow uwsgi<->nginx traffic port
+#      ufw: rule=allow port=9002 proto=tcp
