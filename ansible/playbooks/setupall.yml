@@ -24,6 +24,8 @@
         - git-core
         - nginx
         - libxml2-dev
+        - libssl-dev
+        - libffi-dev
 
     - name: install pip
       action: easy_install name=pip
@@ -34,6 +36,9 @@
         - virtualenv
         - supervisor
         - uwsgi
+        - pyOpenSSL 
+        - ndg-httpsclient 
+        - pyasn1
     
     - name: remove default nginx site
       action: file path=/etc/nginx/sites-enabled/default state=absent
