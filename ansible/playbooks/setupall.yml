@@ -23,6 +23,7 @@
         - python-setuptools
         - git-core
         - nginx
+        - libxml2-dev
 
     - name: install pip
       action: easy_install name=pip
@@ -80,8 +81,8 @@
     - name: reread supervisord config
       action: supervisorctl name={{app_name}} state=present
 
-    - name: update supervisord config
-      action: supervisorctl name={{app_name}} state=restarted
+#    - name: update supervisord config
+#      action: supervisorctl name={{app_name}} state=restarted
 
     - name: start app
       action: supervisorctl name={{app_name}} state=started
